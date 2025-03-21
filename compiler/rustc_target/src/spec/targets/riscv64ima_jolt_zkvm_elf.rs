@@ -6,7 +6,7 @@ pub fn target() -> Target {
         data_layout: "e-m:e-p:64:64-i64:64-n32:64-S128".into(),
         llvm_target: "riscv64".into(),
         pointer_width: 64,
-        arch: "riscv32".into(),
+        arch: "riscv64".into(),
 
         metadata: crate::spec::TargetMetadata {
             description: None,
