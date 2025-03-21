@@ -1,8 +1,9 @@
 name: release
 
 on:
-  workflow_call:
-  workflow_dispatch:
+  push:
+    branches:
+      - feat/rv64ima
 
 jobs:
   build:
