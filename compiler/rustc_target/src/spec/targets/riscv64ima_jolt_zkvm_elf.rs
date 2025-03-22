@@ -20,6 +20,7 @@ pub fn target() -> Target {
             vendor: "jolt".into(),
             linker_flavor: LinkerFlavor::Gnu(Cc::No, Lld::Yes),
             linker: Some("rust-lld".into()),
+            code_model: Some(CodeModel::Medium),
             cpu: "generic-rv64".into(),
             llvm_abiname: "lp64".into(),
             features: "+m,+a".into(),
