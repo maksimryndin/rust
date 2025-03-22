@@ -1,4 +1,4 @@
-use crate::spec::{Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel};
+use crate::spec::{Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel, CodeModel};
 use crate::spec::{Target, TargetOptions};
 
 pub fn target() -> Target {
