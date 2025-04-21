@@ -138,6 +138,7 @@ static TARGETS: &[&str] = &[
     "riscv32imac-unknown-none-elf",
     "riscv32imafc-unknown-none-elf",
     "riscv32gc-unknown-linux-gnu",
+    "riscv64im-jolt-zkvm-elf",
     "riscv64imac-unknown-none-elf",
     "riscv64gc-unknown-hermit",
     "riscv64gc-unknown-none-elf",
