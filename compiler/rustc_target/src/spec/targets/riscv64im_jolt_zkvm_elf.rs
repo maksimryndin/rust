@@ -25,7 +25,7 @@ pub fn target() -> Target {
             llvm_abiname: "lp64".into(),
             features: "+m".into(),
             max_atomic_width: Some(64),
-            atomic_cas: false,
+            atomic_cas: true,
             executables: true,
             panic_strategy: PanicStrategy::Abort,
             relocation_model: RelocModel::Static,
