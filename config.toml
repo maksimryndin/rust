@@ -6,9 +6,6 @@ extended = true
 tools = ["cargo", "cargo-clippy", "clippy", "rustfmt"]
 configure-args = []
 
-[target.riscv64im-jolt-zkvm-elf]
-cc = "riscv64-unknown-elf-gcc"
-
 [rust]
 lld = true
 llvm-tools = true
