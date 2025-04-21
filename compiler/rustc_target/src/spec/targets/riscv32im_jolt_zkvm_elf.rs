@@ -1,12 +1,12 @@
-use crate::spec::{Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel, CodeModel};
+use crate::spec::{Cc, LinkerFlavor, Lld, PanicStrategy, RelocModel};
 use crate::spec::{Target, TargetOptions};
 
 pub fn target() -> Target {
     Target {
-        data_layout: "e-m:e-p:64:64-i64:64-i128:128-n32:64-S128".into(),
-        llvm_target: "riscv64".into(),
-        pointer_width: 64,
-        arch: "riscv64".into(),
+        data_layout: "e-m:e-p:32:32-i64:64-n32-S128".into(),
+        llvm_target: "riscv32".into(),
+        pointer_width: 32,
+        arch: "riscv32".into(),
 
         metadata: crate::spec::TargetMetadata {
             description: None,
@@ -20,10 +20,8 @@ pub fn target() -> Target {
             vendor: "jolt".into(),
             linker_flavor: LinkerFlavor::Gnu(Cc::No, Lld::Yes),
             linker: Some("rust-lld".into()),
-            code_model: Some(CodeModel::Medium),
-            cpu: "generic-rv64".into(),
-            llvm_abiname: "lp64".into(),
-            features: "+m,+a".into(),
+            cpu: "generic-rv32".into(),
+            features: "+m".into(),
             max_atomic_width: Some(64),
             atomic_cas: true,
             executables: true,

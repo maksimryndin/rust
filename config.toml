@@ -1,10 +1,13 @@
 change-id = 125181
 
 [build]
-target = ["riscv64ima-jolt-zkvm-elf"]
+target = ["riscv32im-jolt-zkvm-elf", "riscv64im-jolt-zkvm-elf"]
 extended = true
 tools = ["cargo", "cargo-clippy", "clippy", "rustfmt"]
 configure-args = []
+
+[target.riscv64im-jolt-zkvm-elf]
+cc = "riscv64-unknown-elf-gcc"
 
 [rust]
 lld = true
